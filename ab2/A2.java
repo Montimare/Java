@@ -1,6 +1,24 @@
 package ab2;
 
 public class A2 {
+
+    public enum Compass {
+        NORTH (0),
+        EAST (90),
+        SOUTH (180),
+        WEST (270);
+
+        private int degree;
+
+        Compass(int degree){
+            this.degree = degree;
+        }
+
+        public int getDegree() {
+            return degree;
+        }
+    }
+
     public static void main(String[] args) {
         int value = 3;
         switch (value) {
@@ -11,7 +29,9 @@ public class A2 {
             default:
                 break;
         }
+        Compass a = Compass.NORTH;
 
+        System.out.println(a.getDegree());
         // for (int i = 0; i < 1000; i += 50) {
         //     System.out.println(i);
         // }
@@ -38,6 +58,6 @@ public class A2 {
         //     i++;
         // } while (i < 1000);
         
-
+            
     }
 }
