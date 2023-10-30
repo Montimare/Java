@@ -16,6 +16,6 @@ public class Card {
     }
 
     public String toString(){
-        return (value + " of " + color + ", ");
+        return (value + " of " + color);
     }
 }
