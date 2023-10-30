@@ -11,21 +11,22 @@ public class CardDeck {
         for (int enumeratorColor = 0; enumeratorColor < COLOR.values().length; enumeratorColor++) {
             ArrayList<Card> tmp = new ArrayList<>();
             for (int enumeratorValue = 0; enumeratorValue < VALUE.values().length; enumeratorValue++) {
-                tmp.add(new Card(enumeratorColor, enumeratorColor));
+                tmp.add(new Card(enumeratorColor, enumeratorValue));
             }
             deck.add(tmp);
         }
-
+        // System.out.println("123");
     }
 
     public String toString(){
         String result = "";
-        for (ArrayList<Card> item: deck){
-            for (ArrayList<Card> arrayList : deck) {
-                
+        for (ArrayList<Card> itemArrayList: deck){
+            for (Card item2 : itemArrayList) {
+                result += item2.toString();
             }
+            result += "\n";
         }
-        return "abc";
+        return result;
     }
 }
 

@@ -14,4 +14,8 @@ public class Card {
         this.color = COLOR.values()[color];
         this.value = VALUE.values()[value];
     }
+
+    public String toString(){
+        return (value + " of " + color + ", ");
+    }
 }
